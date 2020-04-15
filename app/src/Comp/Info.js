@@ -9,16 +9,22 @@ const GoTTitle = (props) => {
   }, []);
   console.log(props);
   return (
-    <div>
-      <h1>Game of Thones Quotes! </h1>
-      {props.available && (
-        <Loader type="Puff" color="#00BFFF" height={100} width={100} />
-      )}
-
-      {props.quotes && <h3>"{props.quotes}"</h3>}
-      {props.character && <h3>"{props.character}"</h3>}
-      {props.error && <p className="error">{props.error}</p>}
-      <button onClick={props.getTitle}>Get A NEW QUOTE!</button>
+    <div className="holder">
+      <header className="Title">
+        <h1>Game of Thones Quotes! </h1>
+        <hr></hr>
+        {props.available && (
+          <Loader type="Puff" color="#00BFFF" height={100} width={100} />
+        )}
+      </header>
+      <div className="card">
+        {props.quotes && <h3>"{props.quotes}"</h3>}
+        {props.character && <h3>"{props.character}"</h3>}
+        {props.error && <p className="error">{props.error}</p>}
+        <button className="GetNew" onClick={props.getTitle}>
+          Get A NEW QUOTE!
+        </button>
+      </div>
     </div>
   );
 };

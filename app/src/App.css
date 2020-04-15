@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.holder {
+  color: white;
+  height: 800px;
+  background-image: url(https://d.newsweek.com/en/full/652538/viserion-game-thrones-ice-dragon.jpg);
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 70px;
+}
+
+.card {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.GetNew {
+  color: red;
+  padding: 10px;
+  border-radius: 4%;
+}
+
+button:hover {
+  background-color: blue;
+}
